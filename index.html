@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Penulis Superhero - Suite Kreatif Komik Anda!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/pop_art_theme.css"> 
+</head>
+<body class="bc-superhero-body">
+
+    <header class="pop-art-header main-suite-header">
+        <h1><i class="bi bi-stars"></i> BC Penulis Superhero</h1>
+        <p class="subtitle">Suite Lengkap Mencipta Komik Dari Idea Hingga Visual AI!</p>
+    </header>
+
+    <main class="container mt-4 mt-md-5 mb-5">
+        <div class="text-center mb-4 mb-md-5">
+            <h2 class="pop-art-section-title">Alat Kreatif Anda</h2>
+            <p class="lead pop-art-text">Mulakan pengembaraan komik anda dengan memilih salah satu alat di bawah.</p>
+        </div>
+
+        <div class="row g-3 g-md-4 justify-content-center">
+            <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+                <div class="card pop-art-module-card h-100">
+                    <div class="card-header pop-art-card-header">
+                        <i class="bi bi-lightbulb-fill me-2"></i>KARANG CERITA
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title pop-art-card-title">Cetusan Idea & Plot Awal</h5>
+                        <p class="card-text pop-art-text flex-grow-1">Pilih tahap perancangan cerita anda, dari draf ringkas hingga papan cerita terperinci.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="karang_cerita/bc_junior/karang_jc.html" class="btn btn-pop-art-action w-100 mb-2"> 
+                                <i class="bi bi-brightness-alt-high-fill"></i> BC Junior (Asas)
+                            </a>
+                            <a href="karang_cerita/bc_senior/karang_sc.html" class="btn btn-pop-art-action-secondary w-100"> 
+                                <i class="bi bi-rocket-takeoff"></i> BC Senior (Lanjutan)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+                <div class="card pop-art-module-card h-100">
+                    <div class="card-header pop-art-card-header">
+                        <i class="bi bi-person-badge-fill me-2"></i>BINA WATAK & KOMIK
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title pop-art-card-title">Profil Watak & Info Asas</h5>
+                        <p class="card-text pop-art-text flex-grow-1">Cipta profil watak terperinci dan tetapkan maklumat asas untuk keseluruhan projek komik anda.</p>
+                        <a href="bina_watak/bina_watak.html" class="btn btn-pop-art-action mt-auto pt-3"> 
+                            <i class="bi bi-people"></i> Mula Membina
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-10 col-md-6 col-lg-5 mt-md-4"> 
+                <div class="card pop-art-module-card h-100">
+                    <div class="card-header pop-art-card-header">
+                        <i class="bi bi-pencil-square me-2"></i>KONTROL KOMIK
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title pop-art-card-title">Editor Panel Terperinci</h5>
+                        <p class="card-text pop-art-text flex-grow-1">Susun setiap panel dengan watak, aksi, dialog, sudut kamera, gaya, dan penampilan watak yang tepat.</p>
+                        <a href="kontrol_komik/editor_kontrol_komik.html" class="btn btn-pop-art-action mt-auto pt-3">
+                            <i class="bi bi-layout-text-sidebar-reverse"></i> Buka Editor Panel
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-10 col-md-6 col-lg-5 mt-md-4"> 
+                <div class="card pop-art-module-card h-100">
+                    <div class="card-header pop-art-card-header">
+                        <i class="bi bi-images me-2"></i>TERBITKAN KOMIK (AI)
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title pop-art-card-title">Panduan Prompt AI</h5>
+                        <p class="card-text pop-art-text flex-grow-1">Gunakan data JSON panel anda untuk menjana prompt teks yang tepat bagi AI penjana imej pilihan anda.</p>
+                        <a href="terbitkan_komik/ai_terbit.html" class="btn btn-pop-art-action mt-auto pt-3">
+                            <i class="bi bi-magic"></i> Jana Bantuan Prompt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-pop-art mt-5">
+        <p>&copy; <span id="currentYearFooter"></span> BC Penulis Superhero. <br class="d-sm-none"> Hak Cipta Terpelihara.</p>
+        <p>Dibangunkan di Batam dengan <i class="bi bi-heart-fill" style="color: #ff4136;"></i>!</p>
+    </footer>
+
+    <script>
+        // index.html - JavaScript - 12 Mei 2025, 12:15 PM +08
+        document.getElementById("currentYearFooter").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

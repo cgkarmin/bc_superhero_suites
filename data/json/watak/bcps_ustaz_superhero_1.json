@@ -1,0 +1,57 @@
+{
+  "infoKomik": {
+    "tajukProjek": "Legenda BC Ustaz Superhero",
+    "genreUtama": "Ardiwira",
+    "sinopsisRingkasProjek": "BC Ustaz Superhero melawan Airnami, penjahat elemen air yang ingin menenggelamkan bandar."
+  },
+  "senaraiWatak": [
+    {
+      "idUnikWatak": "borangWatak_1_1747041455936",
+      "namaWatak": "Ustaz Adam (Alter ego: BC Ustaz Superhero)",
+      "peranan": "Protagonis Utama",
+      "deskripsiImejRujukan": "Seorang ustaz muda berpewatakan tenang, berubah menjadi adiwira dengan kostum hijau berkilau dan selempang kuning bercorak songket.",
+      "personalitiKunci": "Alim, berani, bijaksana, prihatin terhadap masyarakat, tabah menghadapi dugaan.",
+      "motivasiUtama": "Menegakkan keadilan dan melindungi insan yang tidak berdosa dari ancaman anasir jahat, sambil menyebarkan mesej kebaikan.",
+      "latarBelakangRingkas": "Menerima kuasa mistik selepas menemui sebilah keris purba semasa mengkaji manuskrip lama di sebuah masjid bersejarah. Kini membahagikan masa antara mengajar agama dan menjadi wira.",
+      "kelebihan": "Kekuatan luar biasa, kepantasan super, kebolehan terbang rendah, mahir dalam silat gayung sakti, mampu menghasilkan perisai tenaga nurani.",
+      "kelemahan": "Kuasanya berkurangan jika tidak solat tepat pada waktu, alah kepada bunyi bising yang melampau (frekuensi tinggi).",
+      "penampilanVisual": {
+        "jantinaUmurVisual": "Lelaki, sekitar 30 tahun",
+        "bentukBadan": "Tegap dan atletik",
+        "warnaRambutGaya": "Hitam, potongan pendek kemas, berjambang nipis.",
+        "warnaMata": "Coklat gelap, bersinar ketika menggunakan kuasa.",
+        "warnaKulit": "Sawo matang cerah",
+        "pakaianLazim": "Kostum adiwira: Sut hijau gelap dengan logo bulan sabit dan bintang emas di dada, seluar panjang hitam, but tinggi. Memakai topeng separa yang menutup bahagian mata. Selempang kuning emas.",
+        "aksesoriKhas": "Keris Pusaka Cahaya (boleh bertukar menjadi tongkat sakti), tasbih digital multifungsi.",
+        "ekspresiWajahTipikal": "Tenang dan penuh keyakinan, senyuman mesra. Bertukar serius dan fokus ketika bertarung.",
+        "ciriUnikVisual": "Aura kehijauan lembut terpancar dari tubuhnya apabila kuasa diaktifkan sepenuhnya."
+      },
+      "slogan": "Demi Kebenaran, Dengan Izin-Nya!",
+      "catatanTambahan": "Suka minum teh tarik kurang manis. Selalu membawa buku nota kecil untuk mencatat idea dakwah."
+    },
+    {
+      "idUnikWatak": "borangWatak_2_1747088846160",
+      "namaWatak": "Airnami (The Aqua Fiend)",
+      "peranan": "Antagonis Utama / Musuh Ketat",
+      "deskripsiImejRujukan": "Entiti humanoid yang terbentuk sepenuhnya dari air bergelora, dengan mata merah menyala dan bayangan gelap di pusat tubuhnya.",
+      "personalitiKunci": "Licik, kejam, pendendam, obses dengan kuasa, tidak mengendahkan kehidupan lain.",
+      "motivasiUtama": "Menguasai semua sumber air di bumi, menenggelamkan bandar-bandar utama untuk mewujudkan dunia akuatik di bawah perintahnya.",
+      "latarBelakangRingkas": "Jelmaan semangat air purba yang tercemar oleh sisa toksik industri, menyebabkan ia menjadi marah dan korup. Percaya bahawa manusia adalah wabak yang perlu dihapuskan.",
+      "kelebihan": "Manipulasi air dalam semua bentuk (cecair, ais, wap), boleh membina tentera hidupan air, regenerasi jika ada sumber air berdekatan, serangan tsunami mini.",
+      "kelemahan": "Sangat rentan terhadap api dan haba yang ekstrem. Kehilangan kuasa jika dikeringkan sepenuhnya atau dipisahkan dari sumber air utama untuk jangka masa lama.",
+      "penampilanVisual": {
+        "jantinaUmurVisual": "Entiti tanpa jantina yang jelas, memaparkan bentuk maskulin yang besar.",
+        "bentukBadan": "Berubah-ubah saiz dan bentuk, biasanya tinggi dan berotot air.",
+        "warnaRambutGaya": "Tiada rambut, bahagian kepala seperti pusaran air atau duri-duri ais.",
+        "warnaMata": "Merah menyala tanpa pupil, memancarkan kebencian.",
+        "warnaKulit": "Pelbagai warna biru dari biru jernih ke biru gelap, kadang-kadang kehijauan akibat pencemaran.",
+        "pakaianLazim": "Tiada pakaian fizikal, tubuhnya adalah air yang membentuk seakan perisai semula jadi.",
+        "aksesoriKhas": "Boleh membentuk senjata dari air seperti pedang pusaran atau cemeti ais.",
+        "ekspresiWajahTipikal": "Muka sentiasa bengis, seringai jahat, atau raungan marah.",
+        "ciriUnikVisual": "Tubuhnya sentiasa beriak dan mengalir, mengeluarkan bunyi deruan air atau titisan yang menakutkan."
+      },
+      "slogan": "Dunia ini akan dibersihkan oleh gelombangku!",
+      "catatanTambahan": "Mampu berkomunikasi dengan hidupan laut dan mengarahkan mereka. Alergi pada ayat-ayat suci tertentu."
+    }
+  ]
+}

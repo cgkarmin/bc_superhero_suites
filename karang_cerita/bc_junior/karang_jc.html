@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Junior - Karang Draf Asas Cerita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/pop_art_theme.css"> 
+</head>
+<body class="bc-superhero-body"> 
+
+    <header class="pop-art-header">
+        <h1><i class="bi bi-easel3-fill"></i> BC Junior</h1> 
+        <p class="subtitle">Draf Cerita Asas & Papan Cerita Ringkas</p>
+    </header>
+
+    <main class="container mt-4">
+        <div class="card card-custom mb-4">
+            <div class="card-header pop-art-card-header">
+                <i class="bi bi-tools me-2"></i>Alat & Tindakan
+            </div>
+            <div class="card-body text-center">
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-2"> 
+                    
+                    <div class="dropup mb-2"> 
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuExportTable" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-download"></i> Eksport Data Jadual
+                        </button>
+                        <ul class="dropdown-menu pop-art-dropdown-menu" aria-labelledby="dropdownMenuExportTable">
+                            <li><button class="dropdown-item" type="button" onclick="exportData('csv')">Sebagai CSV</button></li>
+                            <li><button class="dropdown-item" type="button" onclick="exportData('json')">Sebagai JSON (Draf Cerita)</button></li>
+                            <li><button class="dropdown-item" type="button" onclick="exportData('xml')">Sebagai XML</button></li>
+                        </ul>
+                    </div>
+                    
+                    <input type="file" id="fileInputCSV" accept=".csv" style="display:none;" onchange="handleFile(event)">
+                    <button class="btn btn-success mb-2" type="button" onclick="importCSV()">
+                        <i class="bi bi-upload"></i> Buka CSV dari Fail
+                    </button>
+                    
+                    <div class="dropup d-inline-block mb-2"> 
+                        <button class="btn btn-info text-white dropdown-toggle" type="button" id="adunCeritaDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-magic"></i> Adun & Salin Prompt AI
+                        </button>
+                        <ul class="dropdown-menu pop-art-dropdown-menu" aria-labelledby="adunCeritaDropdown">
+                            <li><button class="dropdown-item" type="button" onclick="adunDanSalinPromptAI('gemini')">Untuk Gemini</button></li>
+                            <li><button class="dropdown-item" type="button" onclick="adunDanSalinPromptAI('chatgpt')">Untuk ChatGPT</button></li>
+                            <li><button class="dropdown-item" type="button" onclick="adunDanSalinPromptAI('claude')">Untuk Claude</button></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><button class="dropdown-item" type="button" onclick="adunDanSalinPromptAI('umum')">Salin Prompt Umum Sahaja</button></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-warning text-dark mb-2" onclick="bukaEditor()">
+                        <i class="bi bi-textarea-t"></i> Buka Editor Karangan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-custom mb-4">
+            <div class="card-header pop-art-card-header">
+                <i class="bi bi-table me-2"></i>Papan Cerita Asas
+            </div>
+            <div class="card-body table-responsive"> 
+                <table id="bcTable" class="table table-bordered pop-art-table"> 
+                    <thead>
+                        <tr>
+                            </tr>
+                    </thead>
+                    <tbody id="bcBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="dropZone" class="mb-4 pop-art-dropzone">
+            <i class="bi bi-cloud-arrow-up-fill"></i> 
+            <p>Seret & lepaskan fail CSV di sini untuk dimuat naik</p>
+        </div>
+        
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="card card-custom h-100"> 
+                    <div class="card-header pop-art-card-header pop-art-card-header-alt1"> 
+                        <i class="bi bi-signpost-split-fill me-2"></i>Struktur Plot Ringkas
+                    </div>
+                    <div class="card-body">
+                        <ul class="pop-art-list">
+                            <li><strong>Mula Cerita</strong> – Siapa & di mana?</li>
+                            <li><strong>Masalah</strong> – Apa berlaku?</li>
+                            <li><strong>Penyelesaian</strong> – Apa yang dilakukan?</li>
+                            <li><strong>Akhir Cerita</strong> – Apa yang terjadi akhirnya?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-custom h-100"> 
+                    <div class="card-header pop-art-card-header pop-art-card-header-alt2"> 
+                        <i class="bi bi-lightbulb-fill me-2"></i>Elemen Cerita (Kolum)
+                    </div>
+                    <div class="card-body">
+                        <ul class="pop-art-list">
+                            <li><strong>🟡 Orang & Tempat</strong> – Siapa & di mana?</li>
+                            <li><strong>🔴 Peristiwa</strong> – Apa tindakan utama?</li>
+                            <li><strong>🟢 Perasaan</strong> – Apa emosi watak?</li>
+                            <li><strong>🔵 Dialog Ringkas</strong> – Apa kata watak?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="richEditorContainer" class="card card-custom mb-4" style="display:none;"> 
+            <div class="card-header pop-art-card-header">
+                <i class="bi bi-file-earmark-richtext-fill me-2"></i>Editor Karangan Lanjutan
+            </div>
+            <div class="card-body">
+                <div id="richEditor" contenteditable="true" class="form-control pop-art-textarea" style="min-height: 250px;">
+                    Tampal hasil adunan cerita dari AI atau tulis karangan penuh di sini...
+                </div>
+                <div class="editor-actions text-end mt-3">
+                    <label for="saveFormat" class="form-label me-2">Simpan Karangan Sebagai:</label>
+                    <select id="saveFormat" class="form-select form-select-sm d-inline-block w-auto me-2 pop-art-select">
+                        <option value="html">HTML</option>
+                        <option value="txt">TXT</option>
+                        <option value="json_karangan">JSON (Karangan)</option> 
+                        <option value="csv_karangan">CSV (Karangan)</option>  
+                        <option value="xml_karangan">XML (Karangan)</option>   
+                        <option value="doc">DOC</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                    <button class="btn btn-success" onclick="simpanEditor()">
+                        <i class="bi bi-save-fill"></i> Simpan Karangan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 mb-4">
+            <button class="btn btn-pop-art-action-main" onclick="simpanDrafDanTeruskan()">
+                <i class="bi bi-arrow-right-circle-fill"></i> Simpan Draf Asas & Ke Bina Watak
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer-pop-art mt-5">
+        <p>&copy; <span id="currentYearFooter"></span> BC Penulis Superhero. Hak Cipta Terpelihara.</p>
+        <p><a href="../../index.html" class="footer-link-back"><i class="bi bi-arrow-left-square-fill"></i> Kembali ke Papan Pemuka Utama</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="script_jc.js"></script>
+    <script>
+        if(document.getElementById("currentYearFooter")) {
+            document.getElementById("currentYearFooter").textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
